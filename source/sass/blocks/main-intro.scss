@@ -1,0 +1,121 @@
+.main-intro {
+  padding-top: 74px;
+  height: 100vh;
+
+  &__wrapper {
+    padding-bottom: 100px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__left {
+    margin-right: 40px;
+    width: calc(60% - 10px);
+    flex-shrink: 0;
+
+    @include viewport--md {
+      margin-right: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $color-default-white;
+    }
+  }
+
+  &__left .fade-in-left {
+    display: block;
+    animation: fadeInLeft 1s ease both;
+
+    &:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+  }
+
+  &__right {
+    width: calc(40% + 10px);
+
+    @include viewport--md {
+      padding-top: 220px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      color: $color-default-white;
+      background-color: $color-neon-blue;
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__right-content {
+    max-width: 360px;
+    width: 100%;
+  }
+
+  &__right.fade-in-left {
+    animation: fadeInLeft 1.3s ease 0.1s both;
+  }
+
+  &__right.fade-out-left {
+    animation: fadeOutLeft 1.3s ease 0.1s both;
+  }
+
+  &__right .fade-in-down {
+    animation: fadeInDown 1s ease 0.6s both;
+  }
+
+  &__right .fade-in-up {
+    animation: fadeInUp 1s ease 0.6s both;
+  }
+
+  &__right .fade-in {
+    transition: opacity 0.3s ease 1s;
+  }
+
+  &__right .move-up {
+    animation: 4s ease 0.6s infinite both;
+    animation-name: moveUp;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 96px;
+    color: $color-neon-blue;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  &__dinozavr {
+
+    @include viewport--md {
+      margin-left: 20px;
+    }
+  }
+}

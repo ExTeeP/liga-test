@@ -1,0 +1,20 @@
+.header {
+  padding: 25px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: $color-default-white;
+  animation: fadeInDown 1s ease 0.6s both;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+  }
+}

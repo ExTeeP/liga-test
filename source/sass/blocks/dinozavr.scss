@@ -1,0 +1,57 @@
+.dinozavr {
+  padding-top: 144px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  display: flex;
+  position: relative;
+
+  &__tape {
+    position: absolute;
+    transition: opacity 0.9s ease;
+  }
+
+  &__tape.hidden {
+    opacity: 0;
+    transition: opacity 0.9s ease;
+  }
+
+  &__tape--1 {
+    top: 45px;
+    left: 0;
+    color: $color-vivid-violet;
+  }
+
+  &__tape--2 {
+    top: 19px;
+    left: 95px;
+    color: $color-torch-red;
+  }
+
+  &__tape--3 {
+    top: -55px;
+    left: 162px;
+    color: $color-neon-blue;
+  }
+
+  &__tape--4 {
+    top: 135px;
+    left: 195px;
+    color: $color-vivid-violet;
+  }
+
+  &__rex {
+    color: $color-neon-blue;
+  }
+}
+
+.dinozavr.dinozavr--white .dinozavr__tape {
+  color: $color-default-white;
+}
+
+.dinozavr.dinozavr--white .dinozavr__rex {
+  color: $color-default-white;
+}
+
+.dinozavr.dinozavr--white .dinozavr__rex-banner {
+  stroke: $color-default-black;
+}
